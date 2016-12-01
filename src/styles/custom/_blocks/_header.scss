@@ -1,0 +1,57 @@
+﻿/* ===== HEADER ===== */
+
+header {
+  background-color: #191128;
+}
+
+.our-contacts {
+  padding: 1.5rem 0;
+
+  &__1 {
+    @include col__f(4.5);
+  }
+  &__2 {
+    @include col__f(4.5);
+  }
+
+  &__3 {
+    @include col__f(3);
+  }
+
+  &_address {
+    line-height: 1.8rem;
+    font-size: 1.6em;
+    color: #ececec;
+  }
+
+  &_link-location {
+    margin-left: 1.5rem;
+    text-decoration: underline;
+    font-size: 1.3em;
+    color: #ececec;
+  }
+
+  &_link-phone {
+    display: inline-block;
+    margin-top: 1rem;
+    line-height: 1.8rem;
+    font-size: 1.8em;
+    font-weight: 500;
+    color: #ececec;
+  }
+}
+
+.icon {
+  margin-right: .5rem;
+}
+
+.icon-loc {
+  vertical-align: middle;
+  @include sprite-box($icon-loc);
+}
+
+.icon-phone {
+  vertical-align: top;
+  @include sprite-box($icon-phone);
+}
+

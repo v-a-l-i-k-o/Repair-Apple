@@ -1,0 +1,62 @@
+/* ===== CORE ===== */
+
+html, body {
+  font-family: 'Ubuntu';
+}
+
+section {
+  position: relative;
+
+  &:after {
+    z-index: 2;
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 100% 100%;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 117rem;
+  padding: 0 1.5rem;
+}
+
+.title__1 {
+  font-size: 4.9em;
+  font-weight: 300;
+  color: white;
+}
+
+.title__2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  font-size: 3.9em;
+}
+
+.white-bg {
+  .title__2, .subtitle {
+    color: #828e8d;
+  }
+}
+
+.purple-bg {
+  .title__2, .subtitle {
+    color: #fff;
+  }
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 2.7em;
+}
+
+.mobile {
+  display: none;
+}

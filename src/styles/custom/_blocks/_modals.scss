@@ -1,0 +1,64 @@
+﻿/* ===== MODALS ===== */
+
+.modal {
+  display: none;
+}
+
+.b-close {
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
+
+.modal_title {
+  margin-bottom: 3rem;
+  font-size: 2.4em;
+  font-weight: 500;
+  text-align: center;
+  color: #584159;
+}
+
+.modal-thanks {
+  width: 55rem;
+  position: relative;
+  padding: 2.5rem 4.5rem;
+  border-radius: 1rem;
+  background-color: white;
+}
+
+.modal-prices {
+  width: 69.1rem;
+  position: relative;
+  padding: 2.5rem 4.5rem;
+  border-radius: 1rem;
+  background-color: white;
+  
+  &_table {
+
+    tr {
+      font-size: 1.8em;
+      font-weight: 400;
+
+      &:nth-child(odd) {
+        color: #39283a;
+      }
+      
+      &:nth-child(even) {
+        color: #fff;
+        background-color: #aa9eaa;
+      }
+    }
+    
+    td {
+      padding: .5rem 1rem;
+      text-align: left;
+      border: none;
+    }
+  }
+
+  &_cost {
+    width: 18%;
+    font-weight: 500;
+  }
+}

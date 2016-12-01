@@ -1,0 +1,9 @@
+@mixin vap() {
+	&:before {
+		width: 0;
+		content: '';
+		height: 100%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+}

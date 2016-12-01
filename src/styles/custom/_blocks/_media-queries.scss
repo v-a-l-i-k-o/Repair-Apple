@@ -1,0 +1,410 @@
+/* ===== MADIA QUERIES FOR RESPONSIVE DESIGN ===== */
+
+/* ----- DESKTOP VERSION ----- */
+
+@media screen and (max-width: 1159px) {
+
+  html {
+    font-size: 55%;
+  }
+	
+}
+
+/* ----- TABLET VERSION ----- */
+
+@media screen and (max-width: 1023px) {
+
+  html {
+    font-size: 44%;
+  }
+
+  .schedule {
+    background-size: 20px;
+  }
+
+}
+
+/* ----- MOBILE VERSION ----- */
+
+@media screen and (max-width: 809px) {
+
+  html {
+    font-size: 50%;
+  }
+
+  .desktop {
+    display: none!important;
+  }
+
+  .mobile {
+    display: inline-block!important;
+  }
+
+  .js .slicknav_menu {
+    display: block;
+  }
+
+  .title__2 {
+    font-size: 3em;
+  }
+
+  .subtitle {
+    font-size: 2.5em;
+  }
+
+  /* ===== CONTENT ===== */
+
+  /* NAV .navbar */
+
+  .navbar {
+    text-align: left;
+    padding: 1rem 1rem;
+  }
+  
+  .logo {
+    width: 15rem;
+    height: 5.5rem;
+    margin-top: .5rem;
+  }
+
+  .schedule {
+    padding-left: 3.5rem;
+    float: none;
+    margin: .5rem 0 0 3rem;
+    font-size: 1.6em;
+    line-height: 2rem;
+  }
+
+  /* SECTION .working */
+
+  .working {
+    background-image: url('../img/bg/working-bg-mob.png');
+
+    .container {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      width: 31rem;
+      padding-top: 1rem;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .claim {
+    text-align: center;
+    @include col(12);
+    @include push(0);
+
+    &_txt {
+      font-size: 1.6em;
+      font-weight: 300;
+    }
+  }
+
+  .title__1 {
+    font-size: 2.4rem;
+  }
+
+  .btn__prices {
+    margin: 1.5rem 2rem 0 0;
+    padding: 1rem 0;
+    width: 19rem;
+    font-size: 1.8em;
+  }
+
+  /* SECTION .why-we */
+
+  .suggestions {
+    text-align: center;
+    margin: 4rem auto 0;
+  }
+
+  .suggestion {
+    display: inline-block;
+    margin-bottom: 3rem;
+
+    &:nth-child(even) {
+      position: static;
+      text-align: left;
+    }
+  }
+
+  /* SECTION .price-info */
+
+  .price-item {
+    position: relative;
+    margin: 0 auto 1rem;
+
+    &:first-child {
+      float: none;
+    }
+
+    &:last-child {
+      float: none;
+    }
+  }
+
+  /* SECTION .we-in-digits */
+
+  .advantage-list {
+    text-align: center;
+  }
+
+  .advantage-item {
+    display: inline-block;
+    margin-bottom: 3rem;
+    text-align: left;
+
+    &:nth-child(even) {
+      position: static;
+    }
+  }
+
+  /* SECTION .consultation */
+
+  .form-group {
+    display: block;
+    margin: 0 0 2rem;
+
+      &:before {
+        display: none;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+
+  input[type="text"] {
+    border: none;
+  }
+
+  .form-control {
+    width: 30rem;
+
+    &__phone {
+      padding-left: 1.5rem;
+    }
+  }
+
+  .btn__consult {
+    width: 30rem;
+
+    &:after {
+      display: none;
+    }
+
+    &:before {
+      display: none;
+    }
+  }
+
+  /* SECTION .about-us */
+
+  .description {
+    padding-top: 35%;
+    background-size: 100% 100%;
+
+    &_txt {
+      padding: 1rem 1rem;
+      font-size: 1.6em;
+      font-weight: 300;
+      line-height: 2.2rem;
+    }
+  }
+
+  /* SECTION .afford */
+
+  .gift-item {
+    width: 100%;
+
+    &_desc {
+      width: 68%;
+    }
+
+    &_txt {
+      line-height: 2rem;
+      font-size: 1.4em;
+    }
+
+    &_title {
+      font-size: 2.4em;
+    }
+  }
+
+  /* SECTION .service */
+
+  .service-list {
+    min-width: auto;
+    padding: 0;
+  }
+
+  .service-item {
+    display: inline-block;
+    margin-bottom: 2rem;
+
+    &_desc {
+      width: 43rem;
+      height: 12rem;
+
+      &:nth-child(odd) {
+        margin-right: -2.5rem;
+      }
+
+      &:nth-child(even) {
+        margin-left: -2.5rem;
+      }
+    }
+
+    &_txt {
+      padding: 0 3.5rem;
+      line-height: 1.5rem;
+      font-size: 1.3em;
+    }
+
+    &_brand {
+      width: 14rem;
+      height: 14rem;
+    }
+  }
+
+  /* SECTION .our-location */
+
+  .tabs {
+
+    &_city {
+      display: block;
+
+      & + & {
+        margin-left: 0;
+        margin-top: 2rem;
+      }
+    }
+
+    &_city__2 {
+
+      &:before {
+        display: none;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &_city__2.active {
+
+      &:before {
+        display: none;
+      }
+    }
+
+    &_link {
+
+      &:before {
+        display: none;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &_link__1 {
+      width: 27rem;
+    }
+
+    &_link__2 {
+      width: 27rem;
+
+    }
+
+    &_link__3 {
+      width: 27rem;
+    }
+
+    &_city.active {
+
+      .tabs_link {
+        color: #fff;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .tab-loc {
+
+    p {
+      padding-left: 3.5rem;
+      font-size: 2.2em;
+    }
+  }
+
+  /* FOOTER */
+
+  footer {
+    height: 53rem;
+    background-color: #ccc;
+  }
+
+}
+
+@media screen and (max-width: 640px) {
+
+  /* SECTION .about-us */
+
+  .description {
+
+    &_txt {
+      width: 100%;
+    }
+  }
+
+  /* ===== MODALS ===== */
+
+  .modal-prices {
+    width: 49rem;
+    padding: 2rem 1.5rem 0;
+
+    &_title {
+      margin-bottom: 2rem;
+      font-size: 2em;
+    }
+
+    &_table {
+
+      tr {
+        font-size: 1.6em;
+      }
+    }
+
+    &_cost {
+      width: 18%;
+    }
+  }
+
+}
+
+@media screen and (max-width: 479px) {
+
+  html {
+    font-size: 40%;
+  }
+
+  .container {
+    padding: 0 .5rem;
+  }
+
+}
+
+@media screen and (max-width: 359px) {
+
+  html {
+    font-size: 35%;
+  }
+
+  .container {
+    padding: 0 .3rem;
+  }
+
+}

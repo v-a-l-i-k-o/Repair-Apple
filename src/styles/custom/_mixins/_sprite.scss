@@ -1,0 +1,124 @@
+$icon-loc-name: 'icon-loc';
+$icon-loc-x: 0px;
+$icon-loc-y: 0px;
+$icon-loc-offset-x: 0px;
+$icon-loc-offset-y: 0px;
+$icon-loc-width: 10px;
+$icon-loc-height: 16px;
+$icon-loc-total-width: 27px;
+$icon-loc-total-height: 33px;
+$icon-loc-image: '../img/sprite/sprite.png';
+$icon-loc: (0px, 0px, 0px, 0px, 10px, 16px, 27px, 33px, '../img/sprite/sprite.png', 'icon-loc', );
+$icon-phone-name: 'icon-phone';
+$icon-phone-x: 12px;
+$icon-phone-y: 18px;
+$icon-phone-offset-x: -12px;
+$icon-phone-offset-y: -18px;
+$icon-phone-width: 15px;
+$icon-phone-height: 15px;
+$icon-phone-total-width: 27px;
+$icon-phone-total-height: 33px;
+$icon-phone-image: '../img/sprite/sprite.png';
+$icon-phone: (12px, 18px, -12px, -18px, 15px, 15px, 27px, 33px, '../img/sprite/sprite.png', 'icon-phone', );
+
+
+$spritesheet-width: 27px;
+$spritesheet-height: 33px;
+$spritesheet-image: '../img/sprite/sprite.png';
+$spritesheet-sprites: ($icon-loc, $icon-phone, );
+$spritesheet: (27px, 33px, '../img/sprite/sprite.png', $spritesheet-sprites, );
+
+// $: ;
+// $: ;
+// $: '';
+// $: ();
+// $: (, , '', $, );
+
+// 
+// $: ();
+
+
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-position($sprite);
+  @include sprite-image($sprite);
+  background-repeat: no-repeat;
+}
+
+@mixin sprite-box($sprite) {
+  display: inline-block;
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+  @include sprite-position($sprite);
+  @include sprite-image($sprite);
+  background-repeat: no-repeat;
+}
+
+@mixin sprite-background-size($sprite) {
+  $sprite-total-width: nth($sprite, 7);
+  $sprite-total-height: nth($sprite, 8);
+  background-size: $sprite-total-width $sprite-total-height;
+}
+
+@mixin retina-sprite($retina-group) {
+  $normal-sprite: nth($retina-group, 2);
+  $retina-sprite: nth($retina-group, 3);
+  @include sprite($normal-sprite);
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    @include sprite-image($retina-sprite);
+    @include sprite-background-size($normal-sprite);
+  }
+}
+
+@mixin retina-sprite-box($retina-group) {
+  $normal-sprite: nth($retina-group, 2);
+  $retina-sprite: nth($retina-group, 3);
+  @include sprite-box($normal-sprite);
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    @include sprite-image($retina-sprite);
+    @include sprite-background-size($normal-sprite);
+  }
+}
+
+
+
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite-box($sprite);
+    }
+  }
+}
+
+@mixin retina-sprites($retina-groups) {
+  @each $retina-group in $retina-groups {
+    $sprite-name: nth($retina-group, 1);
+    .#{$sprite-name} {
+      @include retina-sprite-box($retina-group);
+    }
+  }
+}
+
